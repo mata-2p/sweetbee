@@ -1,5 +1,6 @@
 const express = require('express')
 const Myads = require('../models/Myads')
+const { isAuthenticated, hasRoles }  = require('../auth')
 
 const router = express.Router()
 
@@ -16,17 +17,18 @@ router.get('/:id', (req, res) => {
     .then( x => res.status(200).send(x) )
 })
 
-router.post('/', (req, res) => {
-  Myads.create(req.body)
-    .then( x => res.status(201).send(x) )
+router.post('/', isAuthenticated, (req, res) => {
+  const { _id } = req.user
+  Myads.create({ ...req.body, user_id: _id }).then(x => res.status(201).send(x))
 })
 
-router.put('/:id', (req, res) => {
+//hasrole para el tipo de funcion nos permite verificar de que un usuario tenga cierto rol para acceder a una api
+router.put('/:id', isAuthenticated, hasRoles(['admin','user']), (req, res) => {
   Myads.findOneAndUpdate(req.params.id, req.body)
     .then( () => res.sendStatus(204))
 })
 
-router.delete('/:id', (req, res) => {
+router.delete('/:id', isAuthenticated, hasRoles(['admin','user']), (req, res) => {
   Myads.findOneAndDelete(req.params.id).exec().then( () => res.sendStatus(204))
 })
 
