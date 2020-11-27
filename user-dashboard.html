@@ -42,9 +42,13 @@
                     <span class="site-tagline">Después de comer miel,<br> nada sabe bien!</span>
                 </div>
                 <div class="header-right">
-                    <div class="user-login-panel">
-                        <a href="#" class="user-login-btn" data-toggle="modal" data-target="#loginModal"><i class="icon-profile"></i></a>
-                    </div>
+                    <div class="user-login-panel logged-in-user">
+                        <a href="#" class="user-login-btn" id="userdropdown" data-toggle="dropdown">
+                            <img src="http://placehold.it/100x100&amp;text=IMAGE+PLACEHOLDER" alt="">
+                            <span class="user-informa">
+                                <span class="meta-data">Bienvenido</span>
+                                <span class="user-name">Luis</span>
+                        </a>
                     <div class="topnav dd-menu">
                         <ul class="top-navigation sf-menu">
                             <li><a href="index.html">Comprar</a></li>
@@ -93,12 +97,10 @@
                             <div class="users-sidebar tbssticky">
                             	<a href="user-dashboard.html" class="btn btn-block btn-primary add-listing-btn">Lista de Anuncios</a>
                                 <ul class="list-group">
-                                    <li class="list-group-item active"> <span class="badge">7</span> <a href="user-dashboard.html"><i class="fa fa-home"></i> Panel de Control</a></li>
-                                    <li class="list-group-item"> <span class="badge">5</span> <a href="user-dashboard.html"><i class="fa fa-folder-o"></i>Busquedas Guardadas</a></li>
-                                    <li class="list-group-item"> <span class="badge">12</span> <a href="user-dashboard-favoritos.html"><i class="fa fa-star-o"></i>Favoritos</a></li>
-                                    <li class="list-group-item"> <a href="user-dashboard.html"><i class="fa fa-plus-square-o"></i> Crear Publicación</a></li>
-
-                                    <li class="list-group-item"> <span class="badge">2</span> <a href="user-dashboard-administrar-publicaciones.html"><i class="fa fa-edit"></i> Administrar Publicaciones</a></li>
+                                    <li class="list-group-item active"> <span class="badge">0</span> <a href="user-dashboard.html"><i class="fa fa-home"></i> Panel de Control</a></li>
+                                    <li class="list-group-item"> <span class="badge">0</span> <a href="user-dashboard-favoritos.html"><i class="fa fa-star-o"></i>Favoritos</a></li>
+                                    <li class="list-group-item"> <a href="ads-listing-form.html"><i class="fa fa-plus-square-o"></i> Crear Publicación</a></li>
+                                    <li class="list-group-item"> <span class="badge">0</span> <a href="user-dashboard-administrar-publicaciones.html"><i class="fa fa-edit"></i> Administrar Publicaciones</a></li>
                                     <li class="list-group-item"> <a href="user-dashboard-profile.html"><i class="fa fa-user"></i>Mi perfil</a></li>
                                     <li class="list-group-item"> <a href="user-dashboard.html"><i class="fa fa-cog"></i> Configuracion de Cuenta</a></li>
                                     <li class="list-group-item"> <a href="user-dashboard.html"><i class="fa fa-sign-out"></i>Cerrar sesión</a></li>
@@ -106,11 +108,11 @@
                             </div>
                         </div>
                         <div class="col-md-9 col-sm-8">
-                        	<h2>Panel de Contro </h2>
-                            <p>lkdjs dkfja lskdj lsdkfjj, lksdjflkjakljf dkjflsjal dslkj. lksd jfldsjl jkjflal jflskjflka. ljk jfkldsjaf jdskjlsdkf , ldks jflksjla jsdj jfjds jjf jdjfsj jsd jsjdkl jdsk. L dl jdlklks lksl kls jjdk, ldjkljklsj jsdlkslkjflkjlñ.  Jkdjlsfjsl jskj ksdj j kdsjlsdl. Dñd lksdj lkdsj jsdlkjlksd jd, lkdsjk kdjfjj dkjklsjflks. ljdskljfs jjdsf jdksf..</p>
+                        	<h2>Panel de Control </h2>
+                            <p>Bienvenido, aqui puedes gestionar todo tu contenido.</p>
                             <div class="dashboard-block">
                             	<div class="dashboard-block-head">
-                                	<a href="user-dashboard-saved-bee.html" class="btn btn-default btn-sm pull-right">Ver todas las Publicaciones (2)</a>
+                                	<a href="user-dashboard-saved-bee.html" class="btn btn-default btn-sm pull-right">Ver todas las Publicaciones (0)</a>
                             		<h3>Mis publicaciones</h3>
                                 </div>
                                 <div class="table-responsive">
@@ -126,10 +128,10 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            <!--
                                             <tr>
                                                 <td valign="middle"><input type="checkbox"></td>
                                                 <td>
-                                                    <!-- Resultados -->
                                                     <a href="user-dashboard.html" class="bee-image"><img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" alt=""></a>
                                                     <div id="myads" class="search-find-results">
                                                         <h5><a href="user-dashboard.html">Cajones para Colmena</a></h5>
@@ -149,6 +151,7 @@
                                                     <button class="text-danger" title="Eliminar"><i class="fa fa-times"></i></button>
                                                 </td>
                                             </tr>
+                                            -->
                                         </tbody>
                                     </table>
                                	</div>
@@ -156,7 +159,7 @@
                             </div>
                             <div class="dashboard-block">
                             	<div class="dashboard-block-head">
-                                	<a href="user-dashboard.html" class="btn btn-default btn-sm pull-right">Ver todas los Favoritos  (12)</a>
+                                	<a href="user-dashboard.html" class="btn btn-default btn-sm pull-right">Ver todas los Favoritos  (0)</a>
                             		<h3>Favoritos</h3>
                                 </div>
                                 <div class="table-responsive">
@@ -170,14 +173,14 @@
                                                 <td>Acciones</td>
                                             </tr>
                                         </thead>
+                                            <!--
                                         <tbody>
                                             <tr>
                                                 <td valign="middle"><input type="checkbox"></td>
                                                 <td>
-                                                    <!-- Resultados  -->
                                                     <a href="bee-details.html" class="bee-image"><img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" alt=""></a>
                                                     <div class="search-find-results">
-                                                    <h5><a href="publicacion-details.html">Cajones para Colmena</a></h5> <!-- crear html publicacion-details -->
+                                                    <h5><a href="publicacion-details.html">Cajones para Colmena</a></h5>
                                                         <ul class="inline">
                                                             <li>3 rejillas</li>
                                                             <li>+2 litros de miel</li>
@@ -195,10 +198,9 @@
                                             <tr>
                                                 <td valign="middle"><input type="checkbox"></td>
                                                 <td>
-                                                    <!-- Resultados  -->
                                                     <a href="bee-details.html" class="bee-image"><img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" alt=""></a>
                                                     <div class="search-find-results">
-                                                    <h5><a href="publicacion-details.html">Cajones para Colmena</a></h5> <!-- crear html publicacion-details -->
+                                                    <h5><a href="publicacion-details.html">Cajones para Colmena</a></h5>
                                                         <ul class="inline">
                                                             <li>3 rejillas</li>
                                                             <li>+2 litros de miel</li>
@@ -216,10 +218,9 @@
                                             <tr>
                                                 <td valign="middle"><input type="checkbox"></td>
                                                 <td>
-                                                    <!-- Resultados  -->
                                                     <a href="bee-details.html" class="bee-image"><img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" alt=""></a>
                                                     <div class="search-find-results">
-                                                    <h5><a href="publicacion-details.html">Cajones para Colmena</a></h5> <!-- crear html publicacion-details -->
+                                                    <h5><a href="publicacion-details.html">Cajones para Colmena</a></h5>
                                                         <ul class="inline">
                                                             <li>3 rejillas</li>
                                                             <li>+2 litros de miel</li>
@@ -240,49 +241,7 @@
                                 <button class="btn btn-default btn-sm disabled">Eliminar Seleccionados</button>
                                 <button class="btn btn-default btn-sm disabled">Comparar Seleccionados</button>
                             </div>
-                            <div class="dashboard-block">
-                            	<div class="dashboard-block-head">
-                                	<a href="user-dashboard-saved-bee.html" class="btn btn-default btn-sm pull-right">Ver todas las Busquedas (5)</a>
-                            		<h3>Busquedas Guardadas</h3>
-                                </div>
-                                <div class="table-responsive">
-                                    <table class="table table-bordered dashboard-tables saved-searches-table">
-                                        <thead>
-                                            <tr>
-                                                <td>&nbsp;</td>
-                                                <td>Busqueda por Nombre Personalizado</td>
-                                                <td>Detalles</td>
-                                                <td>Recibir Alertas</td>
-                                                <td>Tiempo de Creación</td>
-                                                <td>Acciones</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td valign="middle"><input type="checkbox"></td>
-                                                <td><a href="#" class="search-name">Nombre de la Busqueda</a></td>
-                                                <td>sdkkh kdsfhjksdha lkakjf bñabal blabalbal balblabla lbalblabl.</td>
-                                                <td><a href="#"><select class="form-control selectpicker input-sm"><option>Habilitado</option><option>Desabilitado</option></select></a></td>
-                                                <td><span class="text-success">Creado el</span> 09/10/20  13:09am</td>
-                                                <td align="center"><button class="text-danger" title="Eliminar"><i class="fa fa-times"></i></button></td>
-                                            </tr>
-                                            <tr>
-                                                <td valign="middle"><input type="checkbox"></td>
-                                                <td><a href="#" class="search-name">Nombre de la Busqueda</a></td>
-                                                <td>sdkkh kdsfhjksdha lkakjf bñabal blabalbal balblabla lbalblabl.</td>
-                                                <td><a href="#"><select class="form-control selectpicker input-sm"><option>Habilitado</option><option>Desabilitado</option></select></a></td>
-                                                <td><span class="text-success">Creado el</span> 09/10/20  13:09am</td>
-                                                <td align="center"><button class="text-danger" title="Eliminar"><i class="fa fa-times"></i></button></td>
-                                            </tr>
-                                            <tr>
-                                                <td valign="middle"><input type="checkbox"></td>
-                                                <td><a href="#" class="search-name">Nombre de la Busqueda</a></td>
-                                                <td>sdkkh kdsfhjksdha lkakjf bñabal blabalbal balblabla lbalblabl.</td>
-                                                <td><a href="#"><select class="form-control selectpicker input-sm"><option>Habilitado</option><option>Desabilitado</option></select></a></td>
-                                                <td><span class="text-success">Creado el</span> 09/10/20  13:09am</td>
-                                                <td align="center"><button class="text-danger" title="Eliminar"><i class="fa fa-times"></i></button></td>
-                                            </tr>
-                                        </tbody>
+                                            -->
                                     </table>
                                	</div>
                                 <button class="btn btn-default btn-sm disabled">Eliminar Seleccionados</button>

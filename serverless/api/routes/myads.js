@@ -28,7 +28,7 @@ router.put('/:id', isAuthenticated, hasRoles(['admin','user']), (req, res) => {
     .then( () => res.sendStatus(204))
 })
 
-router.delete('/:id', isAuthenticated, hasRoles(['admin','user']), (req, res) => {
+router.delete('/:id', isAuthenticated, (req, res) => {
   Myads.findOneAndDelete(req.params.id).exec().then( () => res.sendStatus(204))
 })
 

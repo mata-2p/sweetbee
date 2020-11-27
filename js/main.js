@@ -1,5 +1,3 @@
-let adsState = []
-let ruta = 'login' // login, register, myads
 
 const stringToHTML = (s) => {
   const parser = new DOMParser()
@@ -60,42 +58,68 @@ const renderItem = (item) => {
     adsIdInput = item._id
     console.log(item)
   }
-    */
+  */
   return element
 }
-
-/* //podria utilizarse para los favoritos
+/*
+ //podria utilizarse para los favoritos
+const submit = document.getElementById('submit')
+submit.setAttribute('disabled', true)
 const adsId= document.getElementById('ads-id')
 const adslIdValue = adslId.value
 if (!adslIdValue) {
-  aler('debe seleccionar una publicacion ')
+   aler('debe seleccionar una publicacion ')
   return
 }
-*/
-/*
-const myads= {
+const myads = {
   meal_id: mealIdValue,
   user_id: 'chanchito feliz',
 }
   fetch('http://localhost:3000/api/myads', {
     method: 'POST',
+    mode: 'no-cors',
     headers: {
       'content-Type': 'application/json',
     },
     body: JSON.stringify(myads)
   }).then(x => console.log(x))
   */
-
+/*
 const renderMyads = (myads, ads) => {
   const ads = ads.find( ads => ads._id === myads.ads_id)
   const element = stringToHTML(`<li data-id="${myads._id}">${ads.name} ${myads.user_id}</li>`)
   return element
 }
 
+*/
+
+const inicializaDatos = () => {
+  fetch('http://localhost:3000/api/ads')
+    .then(response => response.json())
+    .then(data => {
+      adsState = data
+      const adsList = document.getElementById('ads-list')
+      const listItems= data.map(renderItem)
+      adsList.removeChild(adsList.firstElementChild)
+      listItems.forEach(element => adsList.appendChild(element))
+    })
+}
+/*
+      //mostrar mis publicaciones(usuarios y publicacion) desde el servidor y llenado automatico
+      fetch('http://localhost:3000/api/myads')
+        .then( response => response.json())
+        .then( myadsData=> {
+          const myadsList= document.getElementById('myads-list')
+          const listMyads = myadsData.map(myadsData => renderMyads(myadsData, data)) //ojito con ads o ad el usa order y orders, ojitoooo
+          myadsList.removeChild(myadsList.firstElementChild) //recordar crear img gif de cargando en mis publicaciones por que este metodo es para eliminarlo y cargarlo automaticamente
+          listMyads.forEach(element => myadsList.appendChild(element))
+        })
+        */
+/*
 const inicializaFormulario = () => {
 // crear publicaciones y mandarlas al servidor
   const myadsForm= document.getElementById('myads')
-  myadsForm.onSubmit = (e) => {
+  myadsForm.onsubmit = (e) => {
     e.preventDefault()
     const submit = document.getElementById('submit')
     submit.setAttribute('disabled', true)
@@ -103,15 +127,18 @@ const inicializaFormulario = () => {
     const adsIdValue = adsId.value
     if (!adsIdvalue) {
       alert('Debe llenar los campos')
+      return
     }
 // creando orden que seria crear publicacion
     const myads = {
       ads_id: adsIdValue,
       user_id: 'chanchito feliz'
     }
+
     fetch('http://localhost:3000/api/myads', {
-      method: 'POST',
-      header: {
+      Access-Control-Allow-Methods: 'POST',
+      mode: 'no-cors',
+      Access-Control-Allow-Headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(myads)
@@ -125,35 +152,18 @@ const inicializaFormulario = () => {
   }
 }
 
-const inicializaDatos = () => {
-  fetch('http://localhost:3000/api/ads')
-    .then(response => response.json())
-    .then(data => {
-      adsState = data
-      const adsList = document.getElementById('ads-list')
-      const listItems= data.map(renderItem)
-      adsList.removeChild(adsList.firstElementChild)
-      listItems.forEach(element => adsList.appendChild(element))
-      //mostrar mis publicaciones(usuarios y publicacion) desde el servidor y llenado automatico
-      fetch('http://localhost:3000/api/myads')
-        .then( response => response.json())
-        .then( myadsData=> {
-          const myadsList= document.getElementById('myads-list')
-          const listMyads = myadsData.map(myadsData => renderMyads(myadsData, data)) //ojito con ads o ad el usa order y orders, ojitoooo
-
-          myadsList.removeChild(myadsList.firstElementChild) //recordar crear img gif de cargando en mis publicaciones por que este metodo es para eliminarlo y cargarlo automaticamente
-          listMyads.forEach(element => myadsList.appendChild(element))
-        })
-    })
-}
-
-window.onload = () => {
+const capturaLogin = () =>{
   const loginForm = document.getElementById('login-form')
   loginForm.onsubmit = (e) => {
     e.preventDefault()
-    const email = document.getElementById('email').value
+    const username = document.getElementById('username').value
     const password = document.getElementById('password').value
-   }
-//  inicializaFormulario()
-// inicializaDatos()
+  }
+}
+*/
+window.onload = () => {
+  //inicializaFormulario()
+  inicializaDatos()
+ // capturaLogin()
+
 }
