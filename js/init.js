@@ -545,18 +545,12 @@ $(document).ready(function(){
 		$(this).prevAll().addClass("completed");
 	});
 	$(".listing-form-steps li:nth-child(1)").on("click", function(){
-		$(".listing-form-progress .progress-bar").attr("data-appear-progress-animation","0%").width("0%");
+		$(".listing-form-progress .progress-bar").attr("data-appear-progress-animation","35%").width("35%");
 	});
 	$(".listing-form-steps li:nth-child(2)").on("click", function(){
-		$(".listing-form-progress .progress-bar").attr("data-appear-progress-animation","25%").width("25%");
-	});
-	$(".listing-form-steps li:nth-child(3)").on("click", function(){
-		$(".listing-form-progress .progress-bar").attr("data-appear-progress-animation","50%").width("50%");
-	});
-	$(".listing-form-steps li:nth-child(4)").on("click", function(){
 		$(".listing-form-progress .progress-bar").attr("data-appear-progress-animation","75%").width("75%");
 	});
-	$(".listing-form-steps li:nth-child(5)").on("click", function(){
+	$(".listing-form-steps li:nth-child(3)").on("click", function(){
 		$(".listing-form-progress .progress-bar").attr("data-appear-progress-animation","100%").width("100%");
 	});
 	$('.listing-add-form .registeredv').on("click", function() {
