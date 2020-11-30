@@ -1,3 +1,5 @@
+
+
 var RegionesYcomunas = {
 
 	"regiones": [{
@@ -278,3 +280,9 @@ window.onload = () => {
  // capturaLogin()
 }
   */
+
+var input=  document.getElementById('inano');
+input.addEventListener('input',function(){
+	if (this.value.length <= 2020) 
+     this.value = this.value.slice(0,4); 
+})
