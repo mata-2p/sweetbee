@@ -38,18 +38,32 @@
         <header class="site-header">
             <div class="container sp-cont">
                 <div class="site-logo">
-                    <h1><a href="index2.html"><img src="images/Honey.png" alt="Logo"></a></h1>
+                    <h1><a href="index.html"><img src="images/Honey.png" alt="Logo"></a></h1>
                     <span class="site-tagline">Después de comer miel,<br> nada sabe bien!</span>
                 </div>
                 <div class="header-right">
-                    <div class="user-login-panel">
-                        <a href="#" class="user-login-btn" data-toggle="modal" data-target="#loginModal"><i class="icon-profile"></i></a>
+                    <div class="user-login-panel logged-in-user">
+                        <a href="#" class="user-login-btn" id="userdropdown" data-toggle="dropdown">
+                            <img src="http://placehold.it/100x100&amp;text=IMAGE+PLACEHOLDER" alt="">
+                            <span class="user-informa">
+                                <span class="meta-data">Bienvenido Administrador</span>
+                                <span class="user-name">Fabiola Escobar</span>
+                            </span>
+                            <span class="user-dd-dropper"><i class="fa fa-angle-down"></i></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="userdropdown">
+                            <li><a href="user-dashboard.html">Panel de Control</a></li>
+                            <li><a href="#">Administrar Publicaciones</a></li>
+                            <li><a href="#">Mi Perfil</a></li>
+                            <li><a href="#">Configuracion</a></li>
+                            <li><a href="#">Cerrar Sesion</a></li>
+                        </ul>
                     </div>
                     <div class="topnav dd-menu">
                         <ul class="top-navigation sf-menu">
                             <li><a href="results-list.html">Comprar</a></li>
                             <li><a href="add-listing-pricing.html">Vender</a></li>
-                            <li><a href="404.html">Unirse</a></li>
+                            <li><a href="joinus.html">Unirse</a></li>
                         </ul>
                     </div>
                 </div>
@@ -78,7 +92,7 @@
             </div>
         </div>
    	</div>
-    <!-- Comiendo de la Cabezera-->
+    <!-- Comienzo de la Cabezera-->
     <div class="page-header parallax" style="background-image:url(http://placehold.it/1200x300&amp;text=IMAGE+PLACEHOLDER);">
     	<div class="container">
         	<h1 class="page-title">Listado de Resultados</h1>
@@ -111,38 +125,45 @@
                             		<a href="user-dashboard-favoritos.html" class="basic-link pull-right">Mostrar todos</a>
                             		<h5>Favoritos</h5>
                                 </div>
-                                <div class="tool-box-in">
+                                <div id="divf" hidden class="tool-box-in">
+                                	<ul class="listing tool-bee-listing">
+                                    	<li>
+                                        	<div class="checkb"><input onclick="document.getElementById('btnc').removeAttribute('disabled');"type="checkbox"></div>
+                                            <div class="imageb"><a href="publicacion-detalles.html"><img src="https://static2.abc.es/Media/201509/24/suple-miel--644x362.jpg" alt=""></a></div>
+                                            <div class="textb">
+                                            	<a href="publicacion-detalles.html">Caja de miel</a>
+                                                <span class="price">$950.000</span>
+                                           	</div>
+                                            <div class="delete"><a onclick="document.getElementById('divf').classList.add('hidden');" href="#"><i class="icon-delete"></i></a></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="divp" hidden class="tool-box-in">
                                 	<ul class="listing tool-bee-listing">
                                     	<li>
                                         	<div class="checkb"><input type="checkbox"></div>
-                                            <div class="imageb"><a href="publicacion-detalles.html"><img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" alt=""></a></div>
+                                            <div class="imageb"><a href="publicacion-detalles.html"><img src="https://demoazimg.prop360.cl/ccii/img/propiedades/51586_IMG-20170215-WA0005_20171030125104.jpg" alt=""></a></div>
                                             <div class="textb">
-                                            	<a href="publicacion-detalles.html">caja de colmena</a>
-                                                <span class="price">$50.000</span>
-                                           	</div>
-                                            <div class="delete"><a href="#"><i class="icon-delete"></i></a></div>
-                                        </li>
-                                    	<li>
-                                        	<div class="checkb"><input type="checkbox"></div>
-                                            <div class="imageb"><a href="publicacion-detalles.html"><img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" alt=""></a></div>
-                                            <div class="textb">
-                                            	<a href="publicacion-detalles.html"><span class="accent-color">Terreno  </span>para trabajar</a>
+                                            	<a href="publicacion-detalles.html">Terreno para trabajar</a>
                                                 <span class="price">$3.500.000</span>
                                            	</div>
-                                            <div class="delete"><a href="#"><i class="icon-delete"></i></a></div>
+                                            <div class="delete"><a onclick="document.getElementById('divp').classList.add('hidden');document.getElementById('btnc').classList.add('disabled');" href="#"><i class="icon-delete"></i></a></div>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="tool-box-foot">
-                                	<a href="#" class="btn btn-xs btn-primary pull-right">Unirse</a>
-                                	<a href="#" class="pull-right tool-signin" data-toggle="modal" data-target="#loginModal">Crear Cuenta</a>
-                                	<a href="#" class="btn btn-xs btn-info">comparar</a>
+                                	<a disabled onclick="window.open('ads-comparision.html', '_blank');" id="btnc" class="btn btn-xs btn-info">comparar</a>
                                 </div>
                             </div>
                         </li>
                     </ul>
                 </div>
                 <div class="col-md-9 col-sm-9">
+                    <div class="btn-group pull-right results-sorter">
+                  	</div>
+
+                    <div class="toggle-view view-count-choice pull-right">
+                    </div>
 
                     <div class="toggle-view view-format-choice pull-right">
                         <label>Vista</label>
@@ -157,7 +178,7 @@
             </div>
       	</div>
     </div>
-    <!-- Comienzo contenido Body-->
+    <!-- Comienzo contenido body -->
   	<div class="main" role="main">
     	<div id="content" class="content full">
         	<div class="container">
@@ -200,8 +221,8 @@
                                     <div id="collapseThird" class="accordion-body collapse">
                                         <div class="accordion-inner">
                                             <ul class="filter-options-list list-group">
-                                                <li class="list-group-item"><span class="badge">1</span><a href="#">Apicultor</a></li>
-                                                <li class="list-group-item"><span class="badge">1</span><a href="#">Predio</a></li>
+                                                <li class="list-group-item"><span class="badge">28</span><a href="#">Apicultor</a></li>
+                                                <li class="list-group-item"><span class="badge">18</span><a href="#">Predio</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -270,6 +291,41 @@
                             </div>
                         	<div id="results-holder" class="results-list-view">
 
+                            	<!-- Item de Resultado -->
+                                  <div  class="result-item format-standard">
+                                     <div class="result-item-image">
+                                         <a href="publicacion-detalles.html" class="media-box"><img src="https://static2.abc.es/Media/201509/24/suple-miel--644x362.jpg" alt=""></a>
+                                          <span class="label label-primary bee-age">Nuevo</span>
+                                          <span class="label label-success premium-listing">Listado Premium</span>
+                                          <div class="result-item-view-buttons">
+                                              <a href=" https://www.youtube.com/watch?v=-5ynnd6KdFE" data-rel="prettyPhoto"><i class="fa fa-play"></i> Ver Video</a>
+                                              <a href="ads-details.html"><i class="fa fa-plus"></i> Ver Detalles</a>
+                                          </div>
+                                      </div>
+                               <div class="result-item-in" data-id="${item._id}">
+                                            <h4 class="result-item-title"><a href="publicacion-detalles.html">Caja de <span class="accent-color">miel </span></a></h4>
+                                            <div class="result-item-cont">
+                                                <div class="result-item-block col1">
+                                                   <p>caja de <span class="accent-color">miel </span>para 50 litros de abeja</p>
+                                               </div>
+                                               <div class="result-item-block col2">
+                                                   <div class="result-item-pricing">
+                                                       <div class="price">$950.000</div>
+                                                    </div>
+                                                   <div class="result-item-action-buttons">
+                                                       <a href="#" class="btn btn-default btn-sm"><i class="fa fa-star-o"></i> Guardar</a>
+                                                       <a href="publicacion-detalles.html" class="btn btn-default btn-sm">Preguntar</a><br>
+                                                   </div>
+                                               </div>
+                                            </div>
+                                            <div class="result-item-features">
+                                               <ul id="ads-list" class="inline">
+                                                    <li>Apicultor</li>
+                                                   <li>Nuevo</li>
+                                               </ul>
+                                           </div>
+                                       </div>
+                                  </div>
                                 <!-- Item de Resultado-->
                                    <div class="result-item format-standard">
                                        <div class="result-item-image">
@@ -281,10 +337,10 @@
                                            </div>
                                       </div>
                                      <div class="result-item-in">
-                                           <h4 class="result-item-title"><a href="publicacion-detalles.html"><span class="accent-color">Terreno  </span> para trabajar</a></h4>
+                                           <h4 class="result-item-title"><a href="publicacion-detalles.html">Terreno para trabajar</a></h4>
                                            <div class="result-item-cont">
                                                <div class="result-item-block col1">
-                                                   <p>En venta parcela ,<span class="accent-color">terreno  </span>o arriendo para servicios.
+                                                   <p>En venta parcela ,terreno o arriendo para servicios.
                                                    Desde $3.500.000 segun servicios que se necesiten</p>
                                                </div>
                                                <div class="result-item-block col2">
@@ -304,41 +360,6 @@
                                               </ul>
                                           </div>
                                       </div>
-                                  </div>
-                            	<!-- Item de Resultado -->
-                                  <div  class="result-item format-standard">
-                                     <div class="result-item-image">
-                                         <a href="publicacion-detalles.html" class="media-box"><img src="https://static2.abc.es/Media/201509/24/suple-miel--644x362.jpg" alt=""></a>
-                                          <span class="label label-primary bee-age">Nuevo</span>
-                                          <span class="label label-success premium-listing">Listado Premium</span>
-                                          <div class="result-item-view-buttons">
-                                              <a href=" https://www.youtube.com/watch?v=-5ynnd6KdFE" data-rel="prettyPhoto"><i class="fa fa-play"></i> Ver Video</a>
-                                              <a href="ads-details.html"><i class="fa fa-plus"></i> Ver Detalles</a>
-                                          </div>
-                                      </div>
-                               <div class="result-item-in" data-id="${item._id}">
-                                            <h4 class="result-item-title"><a href="publicacion-detalles.html">Caja de miel</a></h4>
-                                            <div class="result-item-cont">
-                                                <div class="result-item-block col1">
-                                                   <p>caja de miel para 50 litros de abeja</p>
-                                               </div>
-                                               <div class="result-item-block col2">
-                                                   <div class="result-item-pricing">
-                                                       <div class="price">$950.000</div>
-                                                    </div>
-                                                   <div class="result-item-action-buttons">
-                                                       <a href="#" class="btn btn-default btn-sm"><i class="fa fa-star-o"></i> Guardar</a>
-                                                       <a href="publicacion-detalles.html" class="btn btn-default btn-sm">Preguntar</a><br>
-                                                   </div>
-                                               </div>
-                                            </div>
-                                            <div class="result-item-features">
-                                               <ul id="ads-list" class="inline">
-                                                    <li>Apicultor</li>
-                                                   <li>Nuevo</li>
-                                               </ul>
-                                           </div>
-                                       </div>
                                   </div>
 
                             </div>

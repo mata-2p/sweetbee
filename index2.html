@@ -42,23 +42,8 @@
                     <span class="site-tagline">Después de comer miel,<br> nada sabe bien!</span>
                 </div>
                 <div class="header-right">
-                    <div class="user-login-panel logged-in-user">
-                        <a href="#" class="user-login-btn" id="userdropdown" data-toggle="dropdown">
-                            <img src="http://placehold.it/100x100&amp;text=IMAGE+PLACEHOLDER" alt="">
-                            <span class="user-informa">
-                                <span class="meta-data">Bienvenido</span>
-                                <span class="user-name">Luis Diaz</span>
-                            </span>
-                            <span class="user-dd-dropper"><i class="fa fa-angle-down"></i></span>
-                        </a>
-                        <ul class="dropdown-menu" role="menu" aria-labelledby="userdropdown">
-                            <li><a href="user-dashboard.html">Panel de Control</a></li>
-                            <li><a href="user-dashboard-saved-searches.html">Busquedas Guardadas</a></li>
-                            <li><a href="#">Administrar Publicaciones</a></li>
-                            <li><a href="#">Mi Perfil</a></li>
-                            <li><a href="#">Configuracion</a></li>
-                            <li><a href="#">Cerrar Sesion</a></li>
-                        </ul>
+                    <div class="user-login-panel">
+                        <a href="#" class="user-login-btn" data-toggle="modal" data-target="#loginModal"><i class="icon-profile"></i></a>
                     </div>
                     <div class="topnav dd-menu">
                         <ul class="top-navigation sf-menu">
@@ -86,10 +71,6 @@
                         </li>
                         <li class="megamenu"><a href="index.html">Tus anuncios</a>
                         </li>
-                        <li><a href="index.html">Mensajes</a>
-                        </li>
-                        <li><a href="index.html">Favoritos</a>
-                        </li>
                         <li><a href="index.html">Ayuda</a>
                         </li>
                     </ul>
@@ -97,98 +78,128 @@
             </div>
         </div>
    	</div>
-    <!-- Comienzo de la Cabezera -->
-    <div class="page-header parallax" style="background-image:url(http://placehold.it/1200x300&amp;text=IMAGE+PLACEHOLDER);">
-    	<div class="container">
-        	<h1 class="page-title">lista de Comparacion</h1>
-       	</div>
+    <div class="hero-area">
+        <!-- Formulario Buscar -->
+        <div class="floated">
+            <div class="search-form">
+          		<h2>¿Arriendo de terrenos?¿Servicios de recoleccion?¿Productos?</h2>
+                <p>Busca lo que deseas...</p>
+                <div class="search-form-inner">
+                    <form>
+                    	<div class="input-group input-group-lg">
+      						<input type="text" class="form-control" placeholder="Estoy buscandoo....">
+                        	<span class="input-group-btn">
+                                <a href="results-list4.html"	<button class="btn btn-primary" type="button" >Buscar</button> </a>
+      						</span>
+                        </div>
+                        <span class="label label-warning pull-right">1900 Publicaciones</span>
+                        <span class="label label-success pull-right">230 Productos</span>
+                        <p></p>
+
+                        <!--
+                        <a href="#" class="search-advanced-trigger">Busqueda Avanzada<i class="fa fa-arrow-down"></i></a>
+                        <div class="row advanced-search-row">
+                            <div class="col-md-3">
+                                <label>Precio</label>
+                                <input type="text" class="form-control" placeholder="Min">
+                                <input type="text" class="form-control" placeholder="Max">
+                            </div>
+                            <div class="col-md-3">
+                                <label>Categoria</label>
+                                <select name="Body Type" class="form-control selectpicker">
+                                    <option selected>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <label>Anunciante</label>
+                                <select name="Make" class="form-control selectpicker">
+                                    <option selected>felipe</option>
+                                    <option>Juan</option>
+                                    <option>Belen</option>
+                                    <option>Matias</option>
+                                    <option>Pedro</option>
+                                    <option>Nicolas</option>
+                                    <option>Matilda</option>
+                                    <option>Alan</option>
+                                    <option>Alfredo</option>
+                                    <option>Bastian</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        -->
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Comienzo Slider (HERO) -->
+        <div class="hero-slider heroflex flexslider clearfix" data-autoplay="yes" data-pagination="no" data-arrows="yes" data-style="fade" data-speed="7000" data-pause="yes">
+            <ul class="slides">
+                <li class="parallax" style="background-image:url(https://whyy.org/wp-content/uploads/2019/09/09-05-19-e-cohen-philadelphia-beekeepers-guild-apiary-awbury-arboretum-germantown-19.jpg);"></li>
+                <li class="parallax" style="background-image:url(https://demo.qodeinteractive.com/simplicity/wp-content/uploads/2013/08/home_third_slide.png);"></li>
+            </ul>
+        </div>
+        <!-- Termino Slider (HERO)  -->
     </div>
-    <!-- Barra de Utilidad -->
+    <!-- Barra de utilidad -->
     <div class="utility-bar">
     	<div class="container">
         	<div class="row">
-            	<div class="col-md-8 col-sm-6 col-xs-8">
-                    <ol class="breadcrumb">
-                        <li><a href="index.html">Inicio</a></li>
-                        <li class="active">Comparando publicaciones</li>
-                    </ol>
-            	</div>
-                <div class="col-md-4 col-sm-6 col-xs-4">
-                	<span class="share-text"><i class="icon-share"></i> Compartir comparacion</span>
+							<div class="col-md-4 col-sm-6 col-xs-8">
+							</div>
+            	<div class="col-md-8 col-sm-6 col-xs-4">
                 	<ul class="utility-icons social-icons social-icons-colored">
                     	<li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
                     	<li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
                     	<li class="googleplus"><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                    	<li class="pinterest"><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                    	<li class="linkedin"><a href="#"><i class="fa fa-linkedin"></i></a></li>
                     </ul>
                 </div>
-            </div>
+          	</div>
       	</div>
-    </div>
-    <!-- Comienzo contenido del body -->
-  	<div class="main" role="main">
-    	<div id="content" class="content full">
-        	<div class="container">
-            	<!-- Vehicle Comparision -->
-                <div class="comparision-table-resp">
-                <div class="col3 comparision-table">
-                	<div class="tsticky thead-sticky comp-table-row">
-                    	<div class="comp-table-col">&nbsp;</div>
-                        <div class="comp-table-col">
-                        	<strong>Caja de miel</strong>
-                            <span class="price">$50.000</span>
-                        </div>
-                        <div class="comp-table-col">
-                        	<strong>Parcela para trabajar</strong>
-                            <span class="price">$3.500.000</span>
-                        </div>
-                    </div>
-                	<div class="comp-image comp-table-row">
-                        <div class="comp-table-col">&nbsp;</div>
-                        <div class="comp-table-col"><div class="img-thumbnail"><img src="https://static2.abc.es/Media/201509/24/suple-miel--644x362.jpg" alt=""></div></div>
-                        <div class="comp-table-col"><div class="img-thumbnail"><img src="https://demoazimg.prop360.cl/ccii/img/propiedades/51586_IMG-20170215-WA0005_20171030125104.jpg" alt=""></div></div>
-                    </div>
-                	<div class="comp-feature-head comp-table-row">
-                        <div class="comp-table-col">Detalles de las publicaciones</div>
-                    </div>
-                	<div class="comp-table-row">
-                        <div class="comp-table-col">Tipo de publicacion</div>
-                        <div class="comp-table-col">Apicultores</div>
-                        <div class="comp-table-col">Predios</div>
-                    </div>
-                	<div class="comp-table-row">
-                        <div class="comp-table-col">Año</div>
-                        <div class="comp-table-col">2020</div>
-                        <div class="comp-table-col">2020</div>
-                    </div>
-                	<div class="comp-table-row">
-                        <div class="comp-table-col">Región</div>
-                        <div class="comp-table-col">Región Metropolitana de Santiago</div>
-                        <div class="comp-table-col">Región de la Araucanía</div>
-                    </div>
-                	<div class="comp-table-row">
-                        <div class="comp-table-col">Comuna</div>
-                        <div class="comp-table-col">Peñaflor</div>
-                        <div class="comp-table-col">Cunco</div>
-                    </div>
 
-                	<div class="comp-feature-head comp-table-row">
-                        <div class="comp-table-col">Informacion Adicional</div>
+    </div>
+    <!-- Comienzo contenido del Body -->
+  	<div class="main" role="main">
+    	<div id="content" class="content full padding-b0">
+            <div class="container">
+            	<!-- Bienvenido al contenido y servicio (overview) -->
+            	<div class="row">
+                	<div class="col-md-6">
+	                    	<h1 class="uppercase strong">Bienvenidos a SweetBee<br>Portal de Listados</h1>
+                        <p class="lead">SweetBee es el portal de listado mas grande del mundo<br> facil y rapido <span class="accent-color">compra y venta de productos de la apicultura</span></p>
                     </div>
-                	<div class="comp-table-row comp-table-features">
-                        <div class="comp-table-col">&nbsp;</div>
-                        <div class="comp-table-col">
-                            <ul class="add-features-list">
-                                <li>Nuevo</li>
-                            </ul>
-                       	</div>
-                        <div class="comp-table-col">
-                            <ul class="add-features-list">
-                                <li>Usado</li>
-                            </ul>
-                       	</div>
+                    <div class="col-md-6">
+                    	<p>Quieres vender tus productos de forma, rapida, facil, que sea entretenido, un sistema amigable.</p>
+                        <p>Estas en el lugar correcto :) en <span class="accent-color">SweetBee </span> esta todo lo que necesitas <3</p>
                     </div>
                 </div>
+                <div class="spacer-75"></div>
+
+                    <!-- Busqueda por Categoria -->
+                    <div class="row">
+                        <div class="col-md-3 col-sm-4">
+                            <h3>Busca por categoria </h3>
+                            <a href="rults-list.html" class="btn btn-default btn-lg">Todas las categorias</a>
+                        </div>
+                        <div class="col-md-9 col-sm-8">
+                            <div class="row">
+                                <ul class="owl-carousel" id="make-carousel" data-columns="5" data-autoplay="6000" data-pagination="no" data-arrows="no" data-single-item="no" data-items-desktop="5" data-items-desktop-small="4" data-items-tablet="3" data-items-mobile="3">
+                                    <li class="item"> <a href="results-grid.html"><img src="images/apicultor.png" alt=""></a></li>
+                                    <li class="item"> <a href="results-grid.html"><img src="images/predio2.png" alt=""></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -228,7 +239,7 @@
                     </div>
                 	<div class="col-md-5 col-sm-6 footer_widget widget text_widget">
                     	<h4 class="widgettitle"><a href="about.html"> Acerca de SweetBee </a></h4>
-                        <p>El mejor portal para vender tus productos <3.</p>
+                        <p>blabla miuau bubuu ola Hola, blabla miuau bubuu ola Hola. blabla miuau bubuu ola Hola. blabla miuau bubuu ola Hola, blabla miuau bubuu ola Hola. blabla miuau bubuu ola Hola. blabla miuau bubuu ola Hola, blabla miuau bubuu ola Hola. blabla miuau bubuu ola Hola.</p>
                     </div>
                 </div>
             </div>
@@ -265,14 +276,14 @@
                 <h4>Ingresa a tu cuenta</h4>
             </div>
             <div class="modal-body">
-                <form>
+                <form id="login-form">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                        <input type="text" class="form-control" placeholder="Nombre de Usuario">
+                        <input id="email" type="text" class="form-control" placeholder="Correo">
                     </div>
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-key"></i></span>
-                        <input type="password" class="form-control" placeholder="Contraseña">
+                        <input id="password" type="password" class="form-control" placeholder="Contraseña">
                     </div>
                     <input type="submit" class="btn btn-primary" value="Ingresar">
                 </form>
@@ -291,6 +302,7 @@
 <script src="vendor/owl-carousel/js/owl.carousel.min.js"></script> <!-- Owl Carousel -->
 <script src="vendor/password-checker.js"></script> <!-- Validador de Password -->
 <script src="js/bootstrap.js"></script> <!-- UI  -->
+<script src="js/main.js"></script> <!--Todos los Scripts funcionales-->
 <script src="js/init.js"></script> <!--Todos los Scripts -->
 <script src="vendor/flexslider/js/jquery.flexslider.js"></script> <!-- FlexSlider -->
 <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>

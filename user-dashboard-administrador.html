@@ -46,8 +46,8 @@
                         <a href="#" class="user-login-btn" id="userdropdown" data-toggle="dropdown">
                             <img src="http://placehold.it/100x100&amp;text=IMAGE+PLACEHOLDER" alt="">
                             <span class="user-informa">
-                                <span class="meta-data">Bienvenido</span>
-                                <span class="user-name">Luis Diaz</span>
+                                <span class="meta-data">Bienvenido Administrador</span>
+                                <span class="user-name">Fabiola Escobar</span>
                             </span>
                             <span class="user-dd-dropper"><i class="fa fa-angle-down"></i></span>
                         </a>
@@ -86,10 +86,6 @@
                         </li>
                         <li class="megamenu"><a href="index.html">Tus anuncios</a>
                         </li>
-                        <li><a href="index.html">Mensajes</a>
-                        </li>
-                        <li><a href="index.html">Favoritos</a>
-                        </li>
                         <li><a href="index.html">Ayuda</a>
                         </li>
                     </ul>
@@ -108,14 +104,8 @@
                             <div class="users-sidebar tbssticky">
                             	<a href="user-dashboard.html" class="btn btn-block btn-primary add-listing-btn">Lista de Anuncios</a>
                                 <ul class="list-group">
-                                    <li class="list-group-item active"> <span class="badge">7</span> <a href="user-dashboard.html"><i class="fa fa-home"></i> Panel de Control</a></li>
-                                    <li class="list-group-item"> <span class="badge">5</span> <a href="user-dashboard.html"><i class="fa fa-folder-o"></i>Busquedas Guardadas</a></li>
-                                    <li class="list-group-item"> <span class="badge">12</span> <a href="user-dashboard-favoritos.html"><i class="fa fa-star-o"></i>Favoritos</a></li>
+                                    <li class="list-group-item active"> <span class="badge">2</span> <a href="user-dashboard.html"><i class="fa fa-home"></i> Panel de Control</a></li>
                                     <li class="list-group-item"> <a href="user-dashboard.html"><i class="fa fa-plus-square-o"></i> Crear Publicación</a></li>
-
-                                    <li class="list-group-item"> <span class="badge">2</span> <a href="user-dashboard-administrar-publicaciones.html"><i class="fa fa-edit"></i> Administrar Publicaciones</a></li>
-                                    <li class="list-group-item"> <a href="user-dashboard-profile.html"><i class="fa fa-user"></i>Mi perfil</a></li>
-                                    <li class="list-group-item"> <a href="user-dashboard.html"><i class="fa fa-cog"></i> Configuracion de Cuenta</a></li>
                                     <li class="list-group-item"> <a href="user-dashboard.html"><i class="fa fa-sign-out"></i>Cerrar sesión</a></li>
                                 </ul>
                             </div>
@@ -124,7 +114,7 @@
                         	<h2>Administrar Publicaciones</h2>
                             <div class="dashboard-block">
                                 <div class="table-responsive">
-                                    <table class="table table-bordered table-responsive dashboard-tables saved-bee-table">
+                                    <table id="myTable" class="table table-bordered table-responsive dashboard-tables saved-bee-table">
                                         <thead>
                                             <tr>
                                                 <td>&nbsp;</td>
@@ -140,46 +130,42 @@
                                                 <td valign="middle"><input type="checkbox"></td>
                                                 <td>
                                                     <!-- Resultados -->
-                                                    <a href="user-dashboard.html" class="bee-image"><img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" alt=""></a>
+                                                    <a href="user-dashboard.html" class="bee-image"><img src="https://static2.abc.es/Media/201509/24/suple-miel--644x362.jpg" alt=""></a>
                                                     <div class="search-find-results">
-                                                        <h5><a href="user-dashboard.html">Cajones para Colmena</a></h5>
+                                                        <h5><a href="user-dashboard.html">Caja de miel</a></h5>
                                                         <ul class="inline">
-                                                            <li>3 rejillas</li>
-                                                            <li>+2 litros de miel</li>
-                                                            <li>5 blablaba bla </li>
-                                                            <li>bla blabbla bla</li>
+                                                            <li>Apicultor</li>
+                                                            <li>Nuevo</li>
                                                         </ul>
                                                     </div>
                                                 </td>
-                                                <td><span class="price">$40.990</span></td>
+                                                <td><span class="price">$950.000</span></td>
                                                 <td><span class="text-success">Creado el</span> 09/10/20  13:09pm</td>
                                                 <td align="center"><span class="label label-warning">Pago pendiente</span></td>
                                                 <td align="center">
-                                                    <button class="text-default" title="Archivar"><i class="fa fa-archive"></i></button>
-                                                    <button class="text-danger" title="Eliminar"><i class="fa fa-times"></i></button>
+                                                    <button onclick="window.location.href='ads-listing-form2.html'" class="text-default" title="Archivar"><i class="fa fa-archive"></i></button>
+                                                    <button onclick="document.getElementById('myTable').deleteRow(1);" class="text-danger" title="Eliminar"><i class="fa fa-times"></i></button>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td valign="middle"><input type="checkbox"></td>
                                                 <td>
                                                     <!-- Resultados -->
-                                                    <a href="user-dashboard.html" class="bee-image"><img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" alt=""></a>
+                                                    <a href="user-dashboard.html" class="bee-image"><img src="https://demoazimg.prop360.cl/ccii/img/propiedades/51586_IMG-20170215-WA0005_20171030125104.jpg" alt=""></a>
                                                     <div class="search-find-results">
-                                                        <h5><a href="user-dashboard.html">Cajones para Colmena</a></h5>
+                                                        <h5><a href="user-dashboard.html">Terreno para trabajar</a></h5>
                                                         <ul class="inline">
-                                                            <li>3 rejillas</li>
-                                                            <li>+2 litros de miel</li>
-                                                            <li>5 blablaba bla </li>
-                                                            <li>bla blabbla bla</li>
+                                                            <li>Predio</li>
+                                                            <li>Usado</li>
                                                         </ul>
                                                     </div>
                                                 </td>
-                                                <td><span class="price">$40.990</span></td>
-                                                <td><span class="text-success">Creado el</span> 09/10/20  13:09pm</td>
+                                                <td><span class="price">$3.500.000</span></td>
+                                                <td><span class="text-success">Creado el</span> 15/11/20  18:29pm</td>
                                                 <td align="center"><span class="label label-success">Pagado</span></td>
                                                 <td align="center">
-                                                    <button class="text-default" title="Archivar"><i class="fa fa-archive"></i></button>
-                                                    <button class="text-danger" title="Eliminar"><i class="fa fa-times"></i></button>
+                                                    <button  onclick="window.location.href='ads-listing-form3.html'"class="text-default" title="Archivar"><i class="fa fa-archive"></i></button>
+                                                    <button  onclick="document.getElementById('myTable').deleteRow(2);" class="text-danger" title="Eliminar"><i class="fa fa-times"></i></button>
                                                 </td>
                                             </tr>
                                         </tbody>
